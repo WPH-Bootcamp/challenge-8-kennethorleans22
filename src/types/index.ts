@@ -96,11 +96,11 @@ export type ButtonSize = 'sm' | 'md' | 'lg';
 /**
  * Navigation menu item
  */
-// export interface NavItem {
-//   label: string;
-//   href: string;
-//   external?: boolean;
-// }
+export interface NavItem {
+  label: string;
+  href: string;
+  external?: boolean;
+}
 
 // ==========================================
 // Form Types (if needed)

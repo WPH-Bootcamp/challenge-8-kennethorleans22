@@ -49,7 +49,7 @@ const Button: React.FC<ButtonProps> = ({
   type = 'button',
 }) => {
   // Base styles yang selalu applied
-const baseStyles = 'inline-flex items-center justify-center font-semibold rounded-full transition-all duration-200 cursor-pointer focus:outline-none focus:ring-2 focus:ring-orange focus:ring-offset-2 focus:ring-offset-bg-darkest';
+const baseStyles = 'inline-flex items-center justify-center font-bold rounded-full transition-all duration-200 cursor-pointer focus:outline-none focus:ring-2 focus:ring-orange focus:ring-offset-2 focus:ring-offset-bg-darkest';
 
   // Variant styles - SESUAIKAN dengan design Figma!
 const variantStyles = {
@@ -59,11 +59,11 @@ const variantStyles = {
 };
 
   // Size styles
-  const sizeStyles = {
-    sm: 'px-4 py-2 text-sm',
-    md: 'px-6 py-3 text-base',
-    lg: 'px-8 py-4 text-lg',
-  };
+const sizeStyles: Record<ButtonSize, string> = {
+  sm: 'w-49.25 h-11 text-sm font-bold',   // 197×44px sesuai Figma
+  md: 'px-8 h-12 text-base tracking-tight',
+  lg: 'px-10 h-14 text-lg tracking-tight',
+};
 
   // Disabled styles
   const disabledStyles = 'opacity-50 cursor-not-allowed';
