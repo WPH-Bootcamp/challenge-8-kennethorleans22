@@ -21,6 +21,8 @@
  */
 export type ButtonVariant = 'primary' | 'secondary' | 'outline';
 
+export type ButtonSize = 'sm' | 'md' | 'lg';
+
 /**
  * Example: Button Props
  * Uncomment dan sesuaikan dengan kebutuhan

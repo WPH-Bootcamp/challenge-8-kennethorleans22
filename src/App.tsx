@@ -9,20 +9,40 @@
  * Current: Placeholder untuk testing Tailwind setup
  */
 
+// function App() {
+//   return (
+//     <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+//       <div className="text-center">
+//         <h1 className="text-4xl font-bold text-gray-900 mb-4">
+//           Company Profile Assignment
+//         </h1>
+//         <p className="text-lg text-gray-600 mb-6">
+//           Start building your components!
+//         </p>
+//         <div className="space-y-2 text-sm text-gray-500">
+//           <p>TailwindCSS configured</p>
+//           <p>Folder structure ready</p>
+//           <p>Check README.md for instructions</p>
+//         </div>
+//       </div>
+//     </div>
+//   );
+// }
+
+// export default App;
+
 function App() {
   return (
-    <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+    <div className="min-h-screen flex items-center justify-center">
       <div className="text-center">
-        <h1 className="text-4xl font-bold text-gray-900 mb-4">
-          Company Profile Assignment
+        <h1 className="text-4xl font-bold text-orange mb-4">
+          Setup Berhasil!
         </h1>
-        <p className="text-lg text-gray-600 mb-6">
-          Start building your components!
+        <p className="text-text-secondary">
+          Tailwind + Design System sudah terhubung
         </p>
-        <div className="space-y-2 text-sm text-gray-500">
-          <p>TailwindCSS configured</p>
-          <p>Folder structure ready</p>
-          <p>Check README.md for instructions</p>
+        <div className="mt-6 px-8 py-3 bg-orange rounded-full inline-block">
+          <span className="text-text-white font-bold">Test Button</span>
         </div>
       </div>
     </div>
