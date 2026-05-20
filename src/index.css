@@ -42,3 +42,33 @@ html {
   background: #555;
 }
 */
+
+@theme {
+  --font-sans: "Quicksand", sans-serif;
+  --font-logo: "Outfit", sans-serif;
+
+  --color-bg-darkest: #0A0D12;
+  --color-bg-card: #181D27;
+  --color-border: #252B37;
+
+  --color-orange: #FF623E;
+  --color-orange-dark: #CC4E32;
+  --color-orange-darkest: #80311F;
+  --color-orange-light: #FFE0D8;
+
+  --color-text-white: #FDFDFD;
+  --color-text-secondary: #A4A7AE;
+  --color-text-muted: #717680;
+  --color-text-placeholder: #535862;
+
+  --color-star: #F3B64C;
+  --color-error: #D9206E;
+}
+
+
+
+body {
+  font-family: "Quicksand", sans-serif;
+  background-color: #0A0D12;
+  color: #FDFDFD;
+}
