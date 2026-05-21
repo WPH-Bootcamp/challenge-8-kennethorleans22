@@ -53,8 +53,10 @@ const HeroSection: React.FC = () => {
       {/* ============================================================
           MAIN CONTENT — left side
          ============================================================ */}
-      <div className='relative z-10 flex items-center min-h-screen px-4 sm:px-8 lg:px-35'>
-        <div className='flex flex-col gap-10 lg:max-w-2xl'>
+      <div className='relative z-10 flex flex-col lg:flex-row lg:items-center min-h-screen pt-20 lg:pt-0 pb-12 lg:pb-0'>
+
+        {/* Padding hanya di div teks — supaya image mobile bisa full width */}
+        <div className='flex flex-col gap-10 px-4 sm:px-8 lg:px-35 lg:max-w-2xl'>
           {/* Title + Description — slide in dari kiri */}
           <div
             className='flex flex-col gap-2 animate-fade-in-left'
@@ -79,7 +81,27 @@ const HeroSection: React.FC = () => {
             </Button>
           </div>
         </div>
+
+        {/* ============================================================
+            HERO IMAGE — mobile only, muncul di bawah teks
+           ============================================================ */}
+        <div
+          aria-hidden='true'
+          className='block lg:hidden relative mt-10 w-full pointer-events-none'
+        >
+          <img
+            src={imageHero}
+            alt=''
+            className='w-full aspect-square object-cover animate-float'
+          />
+          {/* Gradient kiri */}
+          <div className='absolute inset-y-0 left-0 w-12 bg-gradient-to-r from-bg-darkest to-transparent' />
+          {/* Gradient bawah */}
+          <div className='absolute bottom-0 inset-x-0 h-12 bg-gradient-to-t from-bg-darkest to-transparent' />
+        </div>
+
       </div>
+
     </section>
   );
 };
