@@ -49,21 +49,25 @@ const Button: React.FC<ButtonProps> = ({
   type = 'button',
 }) => {
   // Base styles yang selalu applied
-const baseStyles = 'inline-flex items-center justify-center font-bold rounded-full transition-all duration-200 cursor-pointer focus:outline-none focus:ring-2 focus:ring-orange focus:ring-offset-2 focus:ring-offset-bg-darkest';
+  const baseStyles =
+    'inline-flex items-center justify-center font-bold rounded-full transition-all duration-200 cursor-pointer focus:outline-none focus:ring-2 focus:ring-orange focus:ring-offset-2 focus:ring-offset-bg-darkest';
 
   // Variant styles - SESUAIKAN dengan design Figma!
-const variantStyles = {
-  primary: 'bg-orange text-text-white hover:bg-orange-dark active:bg-orange-darkest focus:ring-orange shadow-[inset_4px_4px_4px_rgba(255,255,255,0.25)]',
-  secondary: 'bg-bg-card text-text-secondary border border-border hover:border-orange hover:text-text-white focus:ring-orange',
-  outline: 'border-2 border-orange text-orange hover:bg-orange hover:text-text-white focus:ring-orange',
-};
+  const variantStyles = {
+    primary:
+      'bg-orange text-text-white hover:bg-orange-dark active:bg-orange-darkest focus:ring-orange shadow-[inset_4px_4px_4px_rgba(255,255,255,0.25)]',
+    secondary:
+      'bg-bg-card text-text-secondary border border-border hover:border-orange hover:text-text-white focus:ring-orange',
+    outline:
+      'border-2 border-orange text-orange hover:bg-orange hover:text-text-white focus:ring-orange',
+  };
 
   // Size styles
-const sizeStyles: Record<ButtonSize, string> = {
-  sm: 'w-49.25 h-11 text-sm font-bold',   // 197×44px sesuai Figma
-  md: 'px-8 h-12 text-base tracking-tight',
-  lg: 'px-10 h-14 text-lg tracking-tight',
-};
+  const sizeStyles: Record<ButtonSize, string> = {
+    sm: 'w-49.25 h-11 text-sm font-bold', // 197×44px sesuai Figma
+    md: 'w-[200px] h-12 text-base tracking-[-0.02em] font-bold',
+    lg: 'px-10 h-14 text-lg tracking-tight',
+  };
 
   // Disabled styles
   const disabledStyles = 'opacity-50 cursor-not-allowed';

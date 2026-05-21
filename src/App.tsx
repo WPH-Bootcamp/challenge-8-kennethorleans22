@@ -51,15 +51,29 @@
 
 // export default App;
 
+// import Navbar from './components/layout/Navbar';
+
+// function App() {
+//   return (
+//     <div className="min-h-screen">
+//       <Navbar />
+//       <div className="h-screen flex items-center justify-center">
+//         <p className="text-text-secondary">Navbar test</p>
+//       </div>
+//     </div>
+//   );
+// }
+
+// export default App;
+
 import Navbar from './components/layout/Navbar';
+import HeroSection from './components/sections/HeroSection';
 
 function App() {
   return (
     <div className="min-h-screen">
       <Navbar />
-      <div className="h-screen flex items-center justify-center">
-        <p className="text-text-secondary">Navbar test</p>
-      </div>
+      <HeroSection />
     </div>
   );
 }

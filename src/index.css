@@ -63,6 +63,11 @@ html {
 
   --color-star: #F3B64C;
   --color-error: #D9206E;
+
+    /* Custom Animations */
+  --animate-fade-in-left: fadeInLeft 0.7s ease-out both;
+  --animate-fade-in-up:   fadeInUp   0.7s ease-out both;
+  --animate-float:        float      5s   ease-in-out infinite;
 }
 
 
@@ -71,4 +76,34 @@ body {
   font-family: "Quicksand", sans-serif;
   background-color: #0A0D12;
   color: #FDFDFD;
+}
+
+/* ==========================================
+   Custom Text Utilities
+   ========================================== */
+
+/* Display 3xl — 56px/68px sesuai Figma Hero title */
+.text-display-3xl {
+  font-size: 3.5rem;       /* 56px */
+  line-height: 4.25rem;    /* 68px */
+  letter-spacing: -0.02em;
+}
+
+/* ==========================================
+   Animation Keyframes
+   ========================================== */
+
+@keyframes fadeInLeft {
+  from { opacity: 0; transform: translateX(-32px); }
+  to   { opacity: 1; transform: translateX(0);     }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0);    }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0);     }
+  50%       { transform: translateY(-16px); }
 }

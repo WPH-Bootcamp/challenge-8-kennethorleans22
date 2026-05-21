@@ -42,7 +42,7 @@ const Navbar: React.FC = () => {
           aria-label='Kembali ke halaman utama'
           className='flex items-center gap-[9.6px] group'
         >
-          {/* Logo symbol placeholder — ganti dengan SVG asli dari Figma */}
+          {/* Logo symbol*/}
           <img src={logoSymbol} alt='Logo symbol' />
           <span className='font-logo font-semibold text-2xl text-text-white'>
             Your Logo
