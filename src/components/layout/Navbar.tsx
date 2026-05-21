@@ -168,10 +168,10 @@ const Navbar: React.FC = () => {
         role='navigation'
         aria-label='Menu mobile'
         className={`lg:hidden overflow-hidden transition-all duration-300 ease-in-out ${
-          isMenuOpen ? 'max-h-100 opacity-100' : 'max-h-0 opacity-0'
+          isMenuOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0'
         } bg-bg-darkest border-t border-border`}
       >
-        <div className='flex flex-col gap-3 px-4 py-6'>
+        <div className='flex flex-col gap-3 px-4 py-6 min-h-screen'>
           {navItems.map((item) => (
             <a
               key={item.href}
