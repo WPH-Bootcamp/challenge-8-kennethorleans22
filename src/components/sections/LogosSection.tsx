@@ -9,7 +9,7 @@ const LogosSection: React.FC = () => {
     <section
       id='logos'
       aria-label='Partner logos'
-      className='relative bg-bg-darkest overflow-hidden'
+      className='relative bg-bg-darkest overflow-hidden py-10'
     >
       {/* Title */}
     <p className='text-center text-2xl font-bold text-text-white mb-8'>

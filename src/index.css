@@ -47,7 +47,8 @@ html {
   --font-sans: "Quicksand", sans-serif;
   --font-logo: "Outfit", sans-serif;
 
-  --color-bg-darkest: #0A0D12;
+  --color-bg-darkest: #000000;
+  --color-bg-section: #0A0D12;
   --color-bg-card: #181D27;
   --color-border: #252B37;
 
@@ -75,7 +76,7 @@ html {
 
 body {
   font-family: "Quicksand", sans-serif;
-  background-color: #0A0D12;
+  background-color: #000000;
   color: #FDFDFD;
 }
 
@@ -87,6 +88,19 @@ body {
 .text-display-3xl {
   font-size: 3.5rem;       /* 56px */
   line-height: 4.25rem;    /* 68px */
+  letter-spacing: -0.02em;
+  
+}
+
+.text-display-xl {
+  font-size: 2.5rem;      /* 40px — Stats section title desktop */
+  line-height: 3.5rem;    /* 56px */
+  letter-spacing: -0.02em;
+}
+
+.text-display-sm {
+  font-size: 1.75rem;     /* 28px — Stats section title mobile */
+  line-height: 2.375rem;  /* 38px */
   letter-spacing: -0.02em;
 }
 

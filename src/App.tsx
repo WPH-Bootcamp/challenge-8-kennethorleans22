@@ -69,13 +69,19 @@
 import Navbar from './components/layout/Navbar';
 import HeroSection from './components/sections/HeroSection';
 import LogosSection from './components/sections/LogosSection';
+import StatsSection from './components/sections/StatsSection';
+import ProcessSection from './components/sections/ProcessSection';
 
 function App() {
   return (
     <div className='min-h-screen'>
       <Navbar />
-      <HeroSection />
-      <LogosSection />
+      <main>
+        <HeroSection />
+        <LogosSection />
+        <StatsSection />
+        <ProcessSection />
+      </main>
     </div>
   );
 }
