@@ -68,12 +68,14 @@
 
 import Navbar from './components/layout/Navbar';
 import HeroSection from './components/sections/HeroSection';
+import LogosSection from './components/sections/LogosSection';
 
 function App() {
   return (
-    <div className="min-h-screen">
+    <div className='min-h-screen'>
       <Navbar />
       <HeroSection />
+      <LogosSection />
     </div>
   );
 }

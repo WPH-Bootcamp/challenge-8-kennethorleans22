@@ -53,7 +53,7 @@ const HeroSection: React.FC = () => {
       {/* ============================================================
           MAIN CONTENT — left side
          ============================================================ */}
-      <div className='relative z-10 flex flex-col lg:flex-row lg:items-center min-h-screen pt-20 lg:pt-0 pb-12 lg:pb-0'>
+      <div className='relative z-10 flex flex-col lg:flex-row lg:items-center min-h-screen pt-20 lg:pt-0  lg:pb-0'>
 
         {/* Padding hanya di div teks — supaya image mobile bisa full width */}
         <div className='flex flex-col gap-10 px-4 sm:px-8 lg:px-35 lg:max-w-2xl'>
@@ -72,14 +72,14 @@ const HeroSection: React.FC = () => {
           </div>
 
           {/* CTA Button — fade up */}
-          <div
-            className='animate-fade-in-up'
-            style={{ animationDelay: '0.4s' }}
-          >
-            <Button variant='primary' size='md' onClick={handleCtaClick}>
-              {heroData.ctaText}
-            </Button>
-          </div>
+ <div
+  className='animate-fade-in-up w-full flex justify-center lg:justify-start [&>button]:w-full [&>button]:max-w-[361px] lg:[&>button]:w-[200px]'
+  style={{ animationDelay: '0.4s' }}
+>
+  <Button variant='primary' size='md' onClick={handleCtaClick}>
+    {heroData.ctaText}
+  </Button>
+</div>
         </div>
 
         {/* ============================================================
