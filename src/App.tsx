@@ -71,6 +71,9 @@ import HeroSection from './components/sections/HeroSection';
 import LogosSection from './components/sections/LogosSection';
 import StatsSection from './components/sections/StatsSection';
 import ProcessSection from './components/sections/ProcessSection';
+import ServicesSection from './components/sections/ServicesSection';
+import IndustrySection from './components/sections/IndustrySection';
+import PortfolioSection from './components/sections/PortfolioSection';
 
 function App() {
   return (
@@ -81,6 +84,9 @@ function App() {
         <LogosSection />
         <StatsSection />
         <ProcessSection />
+        <ServicesSection />
+        <IndustrySection />
+        <PortfolioSection />
       </main>
     </div>
   );

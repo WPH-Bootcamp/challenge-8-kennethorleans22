@@ -18,13 +18,13 @@ export const servicesData: ServiceItem[] = [
     id: 2,
     title: 'Mobile App Development',
     description: 'Native & cross-platform apps tailored to user needs.',
-    icon: '/services/mobile-app.png',
+    icon: '/services/mobile-app-development.png',
   },
   {
     id: 3,
     title: 'UI/UX Design',
     description: 'Delight users with intuitive and beautiful interfaces.',
-    icon: '/services/uiux-design.png',
+    icon: '/services/ux-design.png',
   },
   {
     id: 4,
@@ -48,7 +48,7 @@ export const servicesData: ServiceItem[] = [
     id: 7,
     title: 'Cybersecurity Services',
     description: 'Stay protected with enterprise-grade security.',
-    icon: '/services/cybersecurity.png',
+    icon: '/services/cybersecurity-services.png',
   },
   {
     id: 8,
@@ -60,6 +60,6 @@ export const servicesData: ServiceItem[] = [
     id: 9,
     title: 'IT Consulting & Support',
     description: 'Make smarter tech decisions with expert guidance.',
-    icon: '/services/it-consulting.png',
+    icon: '/services/it-consulting-support.png',
   },
 ];
