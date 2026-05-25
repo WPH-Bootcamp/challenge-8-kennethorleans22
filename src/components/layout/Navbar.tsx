@@ -80,6 +80,7 @@ const Navbar: React.FC = () => {
           aria-label='Kembali ke halaman utama'
           className='flex items-center gap-2'
         >
+          <img src={logoSymbol} alt='Logo symbol' />
           <span className='font-logo font-semibold text-xl text-text-white'>
             Your Logo
           </span>
