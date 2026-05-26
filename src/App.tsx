@@ -74,6 +74,7 @@ import ProcessSection from './components/sections/ProcessSection';
 import ServicesSection from './components/sections/ServicesSection';
 import IndustrySection from './components/sections/IndustrySection';
 import PortfolioSection from './components/sections/PortfolioSection';
+import TestimonialsSection from './components/sections/TestimonialsSection';
 
 function App() {
   return (
@@ -87,6 +88,7 @@ function App() {
         <ServicesSection />
         <IndustrySection />
         <PortfolioSection />
+        <TestimonialsSection />
       </main>
     </div>
   );
