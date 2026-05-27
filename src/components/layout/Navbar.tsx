@@ -10,6 +10,9 @@ const Navbar: React.FC = () => {
   // State untuk detect apakah user sudah scroll — untuk bonus poin karena saya ragu ini nilai bakalan jelek kayaknya: background berubah
   const [isScrolled, setIsScrolled] = useState(false);
 
+   const handleCtaClick = () => {
+    document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+  };
   // useEffect = jalankan kode ini saat komponen pertama kali muncul di layar
   useEffect(() => {
     const handleScroll = () => {
@@ -67,7 +70,7 @@ const Navbar: React.FC = () => {
         </nav>
 
         {/* Tombol CTA kanan */}
-        <Button variant='primary' size='sm'>
+        <Button variant='primary' size='sm' onClick={handleCtaClick}>
           Let's Talk
         </Button>
       </div>

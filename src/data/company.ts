@@ -21,5 +21,6 @@ export const companyInfo = {
     facebook:  'https://facebook.com/',   
     instagram: 'https://instagram.com/',  
     linkedin:  'https://linkedin.com/',   
+    tiktok: 'https://tiktok.com/'
   },
 };

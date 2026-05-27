@@ -81,7 +81,7 @@ function TestimonialsSection() {
   const nextItem = testimonialsData[nextIndex]!;
 
   return (
-    <section className='bg-bg-darkest py-10 lg:py-20 flex flex-col items-center gap-12 lg:gap-20 overflow-hidden'>
+    <section id='testimonials' className='bg-bg-darkest py-10 lg:py-20 flex flex-col items-center gap-12 lg:gap-20 overflow-hidden'>
       {/* Header */}
       <div className='flex flex-col items-center gap-3 px-4'>
         <h2 className='text-display-sm font-bold text-text-white text-center tracking-tight lg:text-display-xl'>

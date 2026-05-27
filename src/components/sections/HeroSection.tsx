@@ -19,6 +19,7 @@ import Button from '../ui/Button';
 import imageHero from '../../assets/image-hero.svg';
 import { heroData } from '../../data/hero';
 
+
 const HeroSection: React.FC = () => {
   // Scroll to contact section saat CTA diklik
   const handleCtaClick = () => {

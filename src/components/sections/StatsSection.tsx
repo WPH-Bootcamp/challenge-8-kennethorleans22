@@ -106,7 +106,7 @@ const StatsSection: React.FC = () => {
   return (
     <section
       ref={sectionRef}
-      id='stats'
+      id='about'
       aria-label='Company statistics'
       className='bg-bg-darkest py-20 px-4 lg:px-35'
     >

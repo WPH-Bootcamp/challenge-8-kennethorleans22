@@ -2,7 +2,7 @@ import { portfolioData } from '../../data/portfolio';
 
 function PortfolioSection() {
   return (
-    <section className="bg-bg-darkest py-10 px-4 lg:py-20 lg:px-35 flex flex-col items-center gap-6 lg:gap-16">
+    <section id='projects' className="bg-bg-darkest py-10 px-4 lg:py-20 lg:px-35 flex flex-col items-center gap-6 lg:gap-16">
       {/* Header */}
       <div className="flex flex-col items-center gap-3 w-full">
         <h2 className="text-display-sm font-bold text-text-white text-center tracking-tight lg:text-display-xl">

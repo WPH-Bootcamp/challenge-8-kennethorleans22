@@ -76,7 +76,8 @@ import IndustrySection from './components/sections/IndustrySection';
 import PortfolioSection from './components/sections/PortfolioSection';
 import TestimonialsSection from './components/sections/TestimonialsSection';
 import FaqSection from './components/sections/FaqSection';
-
+import ContactSection from './components/sections/ContactSection';
+import FooterSection from './components/sections/FooterSection';
 function App() {
   return (
     <div className='min-h-screen'>
@@ -91,7 +92,9 @@ function App() {
         <PortfolioSection />
         <TestimonialsSection />
         <FaqSection />
+        <ContactSection />
       </main>
+       <FooterSection />
     </div>
   );
 }
