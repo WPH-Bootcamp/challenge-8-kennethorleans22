@@ -9,8 +9,8 @@ export const footerNavItems = [
 ];
 
 export const socialLinks = [
-  { name: 'Facebook',  href: companyInfo.social.facebook,  icon: '/social/facebook.svg'  },
-  { name: 'Instagram', href: companyInfo.social.instagram, icon: '/social/instagram.svg' },
-  { name: 'LinkedIn',  href: companyInfo.social.linkedin,  icon: '/social/linkedin.svg'  },
-  { name: 'TikTok',    href: companyInfo.social.tiktok,    icon: '/social/tiktok.svg'    },
+  { name: 'Facebook',  href: companyInfo.social.facebook,  iconDark: '/social/facebook.svg',   iconLight: '/social/facebook-light.svg'  },
+  { name: 'Instagram', href: companyInfo.social.instagram, iconDark: '/social/instagram.svg',  iconLight: '/social/instagram-light.svg' },
+  { name: 'LinkedIn',  href: companyInfo.social.linkedin,  iconDark: '/social/linkedin.svg',   iconLight: '/social/linkedin-light.svg'  },
+  { name: 'TikTok',    href: companyInfo.social.tiktok,    iconDark: '/social/tiktok.svg',     iconLight: '/social/tiktok-light.svg'    },
 ];

@@ -65,7 +65,7 @@
 // }
 
 // export default App;
-
+import { ThemeProvider } from './contexts/ThemeContext';
 import Navbar from './components/layout/Navbar';
 import HeroSection from './components/sections/HeroSection';
 import LogosSection from './components/sections/LogosSection';
@@ -80,6 +80,7 @@ import ContactSection from './components/sections/ContactSection';
 import FooterSection from './components/sections/FooterSection';
 function App() {
   return (
+    <ThemeProvider>
     <div className='min-h-screen'>
       <Navbar />
       <main>
@@ -96,6 +97,7 @@ function App() {
       </main>
        <FooterSection />
     </div>
+    </ThemeProvider>
   );
 }
 

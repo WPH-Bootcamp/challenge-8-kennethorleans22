@@ -126,13 +126,13 @@ function ContactSection() {
               Mobile: w-[353px] h-[374px] 
               Desktop (lg): max-w-[518px] h-auto
           */}
-          <div className="modal-card w-[353px] h-[374px] lg:w-full lg:max-w-[518px] lg:h-auto flex flex-col rounded-[16px] overflow-hidden border border-[#252B37] box-sizing-border">
+          <div className="modal-card w-[353px] h-[374px] lg:w-full lg:max-w-[518px] lg:h-auto flex flex-col rounded-[16px] overflow-hidden border border-border">
 
             {/* Frame 1618873794 (Bagian Atas - Container Logo)
                 Mobile: h-[160px] p-2
                 Desktop (lg): h-[225px] p-2
             */}
-            <div className="w-full h-[160px] lg:h-[225px] flex justify-center items-center p-2 bg-[#0A0D12]">
+            <div className="w-full h-[160px] lg:h-[225px] flex justify-center items-center p-2 bg-bg-section">
               {/* Message (Logo Gambar 3D Isometric)
                   Mobile: w-[140px] h-[140px]
                   Desktop (lg): w-[228px] h-[228px]
@@ -148,7 +148,7 @@ function ContactSection() {
                 Mobile: h-[214px] pt-6 px-6 pb-10 gap-4 (padding 24px 24px 40px, gap 16px sesuai figma)
                 Desktop (lg): h-auto pt-8 px-8 pb-10 gap-8
             */}
-            <div className="w-full flex flex-col items-center bg-[#000000] h-[214px] pt-6 px-6 pb-10 gap-4 lg:h-auto lg:pt-8 lg:px-8 lg:pb-10 lg:gap-8">
+            <div className="w-full flex flex-col items-center bg-bg-darkest h-[214px] pt-6 px-6 pb-10 gap-4 lg:h-auto lg:pt-8 lg:px-8 lg:pb-10 lg:gap-8">
               
               {/* Frame 1618873163 (Pembungkus Teks)
                   Mobile: w-[305px] h-[90px] gap-[2px]
@@ -159,14 +159,14 @@ function ContactSection() {
                     Mobile: text-[18px] leading-[32px] w-[305px] h-[32px]
                     Desktop (lg): text-[20px] leading-[34px] w-full
                 */}
-                <h3 className="w-[305px] h-[32px] lg:w-full font-sans font-bold text-[18px] leading-[32px] lg:text-[20px] lg:leading-[34px] text-[#FDFDFD]">
+                <h3 className="w-[305px] h-[32px] lg:w-full font-sans font-bold text-[18px] leading-[32px] lg:text-[20px] lg:leading-[34px] text-text-white">
                   {modalState === 'success' ? 'Message Received!' : 'Oops! Something went wrong.'}
                 </h3>
                 {/* Deskripsi Teks 
                     Mobile: text-[14px] leading-[28px] w-[305px] h-[56px]
                     Desktop (lg): text-[16px] leading-[30px] w-full
                 */}
-                <p className="w-[305px] h-[56px] lg:w-full font-sans font-medium text-[14px] leading-[28px] lg:text-[16px] lg:leading-[30px] text-[#A4A7AE]">
+                <p className="w-[305px] h-[56px] lg:w-full font-sans font-medium text-[14px] leading-[28px] lg:text-[16px] lg:leading-[30px] text-text-secondary">
                   {modalState === 'success'
                     ? "Thanks for reaching out — we’ll get back to you as soon as possible."
                     : "We couldn’t send your message. Please try again or check your connection."}

@@ -2,33 +2,26 @@ import React, { useState, useEffect } from 'react';
 import { navItems } from '../../data/navigation';
 import Button from '../ui/Button';
 import logoSymbol from '../../assets/logo-symbol.png';
+import { useTheme } from '../../hooks/useTheme';
 
 const Navbar: React.FC = () => {
-  // State untuk mobile menu (buka/tutup)
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  // State untuk detect apakah user sudah scroll — untuk bonus poin karena saya ragu ini nilai bakalan jelek kayaknya: background berubah
   const [isScrolled, setIsScrolled] = useState(false);
+  const { theme, toggleTheme } = useTheme();
 
-   const handleCtaClick = () => {
+  const handleCtaClick = () => {
     document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
   };
-  // useEffect = jalankan kode ini saat komponen pertama kali muncul di layar
+
   useEffect(() => {
     const handleScroll = () => {
-      // Kalau scroll lebih dari 20px, set isScrolled = true
       setIsScrolled(window.scrollY > 20);
     };
-
-    // Pasang event listener
     window.addEventListener('scroll', handleScroll);
-
-    // Cleanup: lepas event listener saat komponen hilang dari layar
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   return (
-    // role="banner" = semantic HTML untuk header utama (bonus accessibility)
     <header
       role='banner'
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -45,7 +38,6 @@ const Navbar: React.FC = () => {
           aria-label='Kembali ke halaman utama'
           className='flex items-center gap-[9.6px] group'
         >
-          {/* Logo symbol*/}
           <img src={logoSymbol} alt='Logo symbol' />
           <span className='font-logo font-semibold text-2xl text-text-white'>
             Your Logo
@@ -53,7 +45,6 @@ const Navbar: React.FC = () => {
         </a>
 
         {/* Menu navigasi */}
-        {/* role="navigation" + aria-label = screen reader tau kalo ini nav utama */}
         <nav role='navigation' aria-label='Navigasi utama'>
           <ul className='flex items-center gap-3' role='list'>
             {navItems.map((item) => (
@@ -69,10 +60,26 @@ const Navbar: React.FC = () => {
           </ul>
         </nav>
 
-        {/* Tombol CTA kanan */}
-        <Button variant='primary' size='sm' onClick={handleCtaClick}>
-          Let's Talk
-        </Button>
+        {/* Tombol CTA + Toggle */}
+        <div className='flex items-center gap-3'>
+          <Button variant='primary' size='sm' onClick={handleCtaClick}>
+            Let's Talk
+          </Button>
+
+          {/* Theme Toggle */}
+          <button
+            type='button'
+            onClick={toggleTheme}
+            aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
+            className='w-10 h-10 flex items-center justify-center rounded-full border border-border hover:opacity-80 transition-opacity duration-200'
+          >
+            <img
+              src={theme === 'dark' ? '/icons/sun.svg' : '/icons/moon.svg'}
+              alt=''
+              className='w-5 h-5'
+            />
+          </button>
+        </div>
       </div>
 
       {/* ======= MOBILE NAVBAR ======= */}
@@ -89,81 +96,44 @@ const Navbar: React.FC = () => {
           </span>
         </a>
 
-        {/* Tombol hamburger */}
-        <button
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
-          aria-expanded={isMenuOpen}
-          aria-controls='mobile-menu'
-          aria-label={isMenuOpen ? 'Tutup menu' : 'Buka menu'}
-          className='text-text-white p-2 rounded-lg hover:bg-white/10 transition-colors'
-        >
-          {isMenuOpen ? (
-            // Icon X (close)
-            <svg
-              width='24'
-              height='24'
-              viewBox='0 0 24 24'
-              fill='none'
-              aria-hidden='true'
-            >
-              <line
-                x1='18'
-                y1='6'
-                x2='6'
-                y2='18'
-                stroke='currentColor'
-                strokeWidth='2'
-                strokeLinecap='round'
-              />
-              <line
-                x1='6'
-                y1='6'
-                x2='18'
-                y2='18'
-                stroke='currentColor'
-                strokeWidth='2'
-                strokeLinecap='round'
-              />
-            </svg>
-          ) : (
-            // Icon hamburger
-            <svg
-              width='24'
-              height='24'
-              viewBox='0 0 24 24'
-              fill='none'
-              aria-hidden='true'
-            >
-              <line
-                x1='3'
-                y1='6'
-                x2='21'
-                y2='6'
-                stroke='currentColor'
-                strokeWidth='2'
-                strokeLinecap='round'
-              />
-              <line
-                x1='3'
-                y1='12'
-                x2='21'
-                y2='12'
-                stroke='currentColor'
-                strokeWidth='2'
-                strokeLinecap='round'
-              />
-              <line
-                x1='3'
-                y1='18'
-                x2='21'
-                y2='18'
-                stroke='currentColor'
-                strokeWidth='2'
-                strokeLinecap='round'
-              />
-            </svg>
-          )}
-        </button>
+        {/* Toggle + Hamburger */}
+        <div className='flex items-center gap-1'>
+          {/* Theme Toggle */}
+          <button
+            type='button'
+            onClick={toggleTheme}
+            aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
+            className='w-10 h-10 flex items-center justify-center rounded-lg hover:bg-white/10 transition-colors'
+          >
+            <img
+              src={theme === 'dark' ? '/icons/sun.svg' : '/icons/moon.svg'}
+              alt=''
+              className='w-5 h-5'
+            />
+          </button>
+
+          {/* Hamburger */}
+          <button
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            aria-expanded={isMenuOpen}
+            aria-controls='mobile-menu'
+            aria-label={isMenuOpen ? 'Tutup menu' : 'Buka menu'}
+            className='text-text-white p-2 rounded-lg hover:bg-white/10 transition-colors'
+          >
+            {isMenuOpen ? (
+              <svg width='24' height='24' viewBox='0 0 24 24' fill='none' aria-hidden='true'>
+                <line x1='18' y1='6' x2='6' y2='18' stroke='currentColor' strokeWidth='2' strokeLinecap='round' />
+                <line x1='6' y1='6' x2='18' y2='18' stroke='currentColor' strokeWidth='2' strokeLinecap='round' />
+              </svg>
+            ) : (
+              <svg width='24' height='24' viewBox='0 0 24 24' fill='none' aria-hidden='true'>
+                <line x1='3' y1='6' x2='21' y2='6' stroke='currentColor' strokeWidth='2' strokeLinecap='round' />
+                <line x1='3' y1='12' x2='21' y2='12' stroke='currentColor' strokeWidth='2' strokeLinecap='round' />
+                <line x1='3' y1='18' x2='21' y2='18' stroke='currentColor' strokeWidth='2' strokeLinecap='round' />
+              </svg>
+            )}
+          </button>
+        </div>
       </div>
 
       {/* ======= MOBILE MENU (dropdown) ======= */}
@@ -186,7 +156,6 @@ const Navbar: React.FC = () => {
               {item.label}
             </a>
           ))}
-          {/* Tombol CTA di mobile menu */}
           <div className='mt-2'>
             <Button
               variant='primary'

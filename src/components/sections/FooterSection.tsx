@@ -1,10 +1,11 @@
 import logoSymbol from '../../assets/logo-symbol.png';
 import { footerNavItems, socialLinks } from '../../data/footer';
 import { scrollToSection } from '../../utils/scroll';
+import { useTheme } from '../../hooks/useTheme';
 
 
 function FooterSection() {
-  
+  const { theme } = useTheme();
 
   return (
     <footer className="bg-bg-darkest py-6 px-4 lg:py-10 lg:px-35">
@@ -54,7 +55,7 @@ function FooterSection() {
 
           {/* Social Icons */}
           <div className="flex flex-row items-center gap-4 w-[208px] h-[40px]">
-            {socialLinks.map(({ name, href, icon }) => (
+            {socialLinks.map(({ name, href, iconDark, iconLight }) => (
               <a
                 key={name}
                 href={href}
@@ -64,7 +65,7 @@ function FooterSection() {
                 className="w-[40px] h-[40px] flex-none hover:opacity-75 transition-opacity duration-200"
               >
                 <img
-                  src={icon}
+                  src={theme === 'dark' ? iconDark : iconLight}
                   alt=""
                   className="w-full h-full object-contain"
                 />

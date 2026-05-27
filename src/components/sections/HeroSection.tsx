@@ -13,14 +13,18 @@
  * - Description: 20px / 34px / weight 600
  * - Button: 200×48px primary orange
  */
-
 import React from 'react';
 import Button from '../ui/Button';
 import imageHero from '../../assets/image-hero.svg';
+import imageHeroLight from '../../assets/image-hero-light.svg';
 import { heroData } from '../../data/hero';
+import { useTheme } from '../../hooks/useTheme';
 
 
 const HeroSection: React.FC = () => {
+  const { theme } = useTheme();
+  const heroImage = theme === 'dark' ? imageHero : imageHeroLight;
+
   // Scroll to contact section saat CTA diklik
   const handleCtaClick = () => {
     document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
@@ -40,7 +44,7 @@ const HeroSection: React.FC = () => {
         className='absolute inset-y-0 right-0 w-1/2 hidden lg:block pointer-events-none'
       >
         <img
-          src={imageHero}
+          src={heroImage}
           alt='Hero illustration'
           className='w-full h-full object-cover object-left animate-float'
         />
@@ -73,14 +77,14 @@ const HeroSection: React.FC = () => {
           </div>
 
           {/* CTA Button — fade up */}
- <div
-  className='animate-fade-in-up w-full flex justify-center lg:justify-start [&>button]:w-full [&>button]:max-w-[361px] lg:[&>button]:w-[200px]'
-  style={{ animationDelay: '0.4s' }}
->
-  <Button variant='primary' size='md' onClick={handleCtaClick}>
-    {heroData.ctaText}
-  </Button>
-</div>
+          <div
+            className='animate-fade-in-up w-full flex justify-center lg:justify-start [&>button]:w-full [&>button]:max-w-[361px] lg:[&>button]:w-[200px]'
+            style={{ animationDelay: '0.4s' }}
+          >
+            <Button variant='primary' size='md' onClick={handleCtaClick}>
+              {heroData.ctaText}
+            </Button>
+          </div>
         </div>
 
         {/* ============================================================
@@ -91,7 +95,7 @@ const HeroSection: React.FC = () => {
           className='block lg:hidden relative mt-10 w-full pointer-events-none'
         >
           <img
-            src={imageHero}
+            src={heroImage}
             alt=''
             className='w-full aspect-square object-cover animate-float'
           />

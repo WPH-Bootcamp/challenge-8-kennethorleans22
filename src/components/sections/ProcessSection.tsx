@@ -16,13 +16,13 @@ function ChevronIcon({ isOpen }: { isOpen: boolean }) {
       viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      className={`shrink-0 transition-transform duration-300 ${
+      className={`shrink-0 transition-transform duration-300 text-text-white ${
         isOpen ? 'rotate-180' : 'rotate-0'
       }`}
     >
       <path
         d="M6 9L12 15L18 9"
-        stroke="#FDFDFD"
+        stroke="currentColor"
         strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
@@ -30,7 +30,6 @@ function ChevronIcon({ isOpen }: { isOpen: boolean }) {
     </svg>
   );
 }
-
 /* ──────────────────────────────────
    Accordion Card
    ────────────────────────────────── */

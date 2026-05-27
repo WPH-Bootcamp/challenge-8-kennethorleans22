@@ -5,7 +5,7 @@
  * Docs: https://tailwindcss.com/docs/installation/using-vite
  */
 
-@import "tailwindcss";
+@import 'tailwindcss';
 
 /* Tell Tailwind where to scan for classes */
 @source "./**/*.{js,jsx,ts,tsx}";
@@ -44,40 +44,38 @@ html {
 */
 
 @theme {
-  --font-sans: "Quicksand", sans-serif;
-  --font-logo: "Outfit", sans-serif;
+  --font-sans: 'Quicksand', sans-serif;
+  --font-logo: 'Outfit', sans-serif;
 
   --color-bg-darkest: #000000;
-  --color-bg-section: #0A0D12;
-  --color-bg-card: #181D27;
-  --color-border: #252B37;
+  --color-bg-section: #0a0d12;
+  --color-bg-card: #181d27;
+  --color-border: #252b37;
 
-  --color-orange: #FF623E;
-  --color-orange-dark: #CC4E32;
-  --color-orange-darkest: #80311F;
-  --color-orange-light: #FFE0D8;
+  --color-orange: #ff623e;
+  --color-orange-dark: #cc4e32;
+  --color-orange-darkest: #80311f;
+  --color-orange-light: #ffe0d8;
 
-  --color-text-white: #FDFDFD;
-  --color-text-secondary: #A4A7AE;
+  --color-text-white: #fdfdfd;
+  --color-text-secondary: #a4a7ae;
   --color-text-muted: #717680;
   --color-text-placeholder: #535862;
 
-  --color-star: #F3B64C;
-  --color-error: #D9206E;
+  --color-star: #f3b64c;
+  --color-error: #d9206e;
 
-    /* Custom Animations */
+  /* Custom Animations */
   --animate-fade-in-left: fadeInLeft 0.7s ease-out both;
-  --animate-fade-in-up:   fadeInUp   0.7s ease-out both;
-  --animate-float:        float      5s   ease-in-out infinite;
-    --animate-marquee: marquee 35s linear infinite;
+  --animate-fade-in-up: fadeInUp 0.7s ease-out both;
+  --animate-float: float 5s ease-in-out infinite;
+  --animate-marquee: marquee 35s linear infinite;
 }
 
-
-
 body {
-  font-family: "Quicksand", sans-serif;
-  background-color: #000000;
-  color: #FDFDFD;
+  font-family: 'Quicksand', sans-serif;
+  background-color: var(--color-bg-darkest);
+  color: var(--color-text-white);
 }
 
 /* ==========================================
@@ -86,21 +84,20 @@ body {
 
 /* Display 3xl — 56px/68px sesuai Figma Hero title */
 .text-display-3xl {
-  font-size: 3.5rem;       /* 56px */
-  line-height: 4.25rem;    /* 68px */
+  font-size: 3.5rem; /* 56px */
+  line-height: 4.25rem; /* 68px */
   letter-spacing: -0.02em;
-  
 }
 
 .text-display-xl {
-  font-size: 2.5rem;      /* 40px — Stats section title desktop */
-  line-height: 3.5rem;    /* 56px */
+  font-size: 2.5rem; /* 40px — Stats section title desktop */
+  line-height: 3.5rem; /* 56px */
   letter-spacing: -0.02em;
 }
 
 .text-display-sm {
-  font-size: 1.75rem;     /* 28px — Stats section title mobile */
-  line-height: 2.375rem;  /* 38px */
+  font-size: 1.75rem; /* 28px — Stats section title mobile */
+  line-height: 2.375rem; /* 38px */
   letter-spacing: -0.02em;
 }
 
@@ -109,23 +106,44 @@ body {
    ========================================== */
 
 @keyframes fadeInLeft {
-  from { opacity: 0; transform: translateX(-32px); }
-  to   { opacity: 1; transform: translateX(0);     }
+  from {
+    opacity: 0;
+    transform: translateX(-32px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 @keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(24px); }
-  to   { opacity: 1; transform: translateY(0);    }
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes float {
-  0%, 100% { transform: translateY(0);     }
-  50%       { transform: translateY(-16px); }
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-16px);
+  }
 }
 
 @keyframes marquee {
-  from { transform: translateX(0); }
-  to   { transform: translateX(-50%); }
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
 }
 
 /* Contact Form */
@@ -147,8 +165,12 @@ body {
 }
 
 @keyframes fade-in {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .modal-backdrop {
@@ -157,4 +179,17 @@ body {
 
 .modal-card {
   animation: modal-in 0.25s ease-out;
+}
+
+/* ==========================================
+   Light Mode Overrides
+   ========================================== */
+
+.light {
+  --color-bg-darkest:     #FFFFFF;
+  --color-bg-section:     #FAFAFA;
+  --color-bg-card:        #DEDCDC;
+  --color-border:         #DFDFDF;
+  --color-text-white:     #0A0D12;
+  --color-text-secondary: #717680;
 }
