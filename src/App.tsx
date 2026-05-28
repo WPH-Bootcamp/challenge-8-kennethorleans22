@@ -77,7 +77,7 @@ import PortfolioSection from './components/sections/PortfolioSection';
 import TestimonialsSection from './components/sections/TestimonialsSection';
 import FaqSection from './components/sections/FaqSection';
 import ContactSection from './components/sections/ContactSection';
-import FooterSection from './components/sections/FooterSection';
+import FooterSection from './components/layout/FooterSection';
 function App() {
   return (
     <ThemeProvider>
