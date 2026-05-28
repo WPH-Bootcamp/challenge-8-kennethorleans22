@@ -1,3 +1,8 @@
+Nama: [Kenneth Orleans]
+Repository: [(https://github.com/WPH-Bootcamp/challenge-8-kennethorleans22)]
+Deployment: [(https://challenge8-nine.vercel.app/)]
+Notes: [Catatan tambahan jika ada - challenges, learning points, etc.]
+
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/GWu25I7f)
 # Company Profile - React Assignment
 
